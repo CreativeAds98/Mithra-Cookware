@@ -617,32 +617,18 @@ button.white:hover{
     align-items: center;
 }
 #about-head img{
-    width: 50%;
+    width: 580px;
+    max-width: 90%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(8,129,120,0.10);
+    margin-bottom: 20px;
+    object-fit: cover;
 }
 #about-head div{
     padding-left: 40px;
 }
-/* #about-app{
-    text-align: center;
-} */
-#about-app .video{
-    width: 70%;
-    height: 100%;
-    margin: 30px auto 0 auto;
-}
-#about-app .video video{
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-}
-/* #about-footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10rem;
-} */
+
 
 
 
@@ -1004,8 +990,8 @@ gap: 2px;
       flex-direction: column;
     }
     #about-head img{
-     width: 100%;
-     height: auto;
+     width: 80%;
+     height: 60vh;
      margin-bottom: 20px;
     }
     #about-head div{
