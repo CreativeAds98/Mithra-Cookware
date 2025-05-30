@@ -1218,11 +1218,9 @@ gap: 2px;
 footer {
     position: relative;
 }
-html, body {
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
+
+
+
+html {
+    scroll-behavior: smooth;
 }
-
-
-
