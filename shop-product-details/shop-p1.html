@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="shortcut icon" href="./image/design/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="../script.js"></script>
+
+     <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+.product-card {
+  height: 100%;
+  width: 100%;
+  max-width: none;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+}
+    .gallery {
+      flex: 1;
+      min-width: 300px;
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .main-image {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .main-image img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .thumbnail-scroll {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      margin-top: 15px;
+      padding-bottom: 5px;
+      scrollbar-width: none;
+    }
+
+    .thumbnail-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .thumb {
+      height: 60px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: transform 0.2s, border 0.2s;
+      border: 2px solid transparent;
+    }
+
+    .thumb:hover {
+      transform: scale(1.05);
+      border-color: #666;
+    }
+
+    .thumb.active {
+      border-color: #ff5722;
+    }
+
+    .product-details {
+      flex: 1;
+      padding: 30px;
+      min-width: 300px;
+    }
+
+    .product-details h2 {
+      font-size: 34px;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      color: #ff9800;
+      margin-bottom: 12px;
+    }
+
+    .reviews {
+      color: #555;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+    .price-section {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      color: #e53935;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      margin-right: 10px;
+    }
+
+    .discount {
+      color: #388e3c;
+      font-weight: 600;
+    }
+
+    .offers div {
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .offers i {
+      margin-right: 6px;
+      color: #2196f3;
+    }
+
+    .size-select {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .sizes {
+      margin-top: 10px;
+    }
+
+    .size-btn {
+      padding: 8px 14px;
+      margin-right: 8px;
+      border: 1px solid #999;
+      background: white;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .size-btn.active,
+    .size-btn:hover {
+      background: #333;
+      color: white;
+    }
+
+    .buy-btn {
+      padding: 12px 20px;
+      background: #ff5722;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .buy-btn:hover {
+      background: #e64a19;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .product-card {
+        flex-direction: column;
+      }
+      .product-details, .gallery {
+        padding: 20px;
+      }
+    }
+  </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="body1" id="body1">
+
+     <section id="header">
+        <a href="../index.html"><img src="../image/design/mithra-logo.png" alt="Mithra Logo" class="logo"></a>
+        <nav>
+            <ul id="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../shop.html">Shop</a></li>
+                <li><a href="../Branches.html">Where to buy</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li id="lg-bag"><a href=""><i class="fa fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </nav>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+   </section>
+   
+       <!--Page-Header-->
+    <section id="page-header-1" class="about-header">
+       <h2 ></h2>
+    </section>
+
+
+     <!--main Layout Ends-->
+
+    <section id="shop-p1" class="shop-p1">
+        
+
+          <div class="square-container">
+         <div class="product-card">
+    <div class="gallery">
+      <div class="main-image">
+        <img id="mainDisplay" src="../image/item-img/1.jpg" alt="Main Image" />
+      </div>
+     
+    </div>
+
+    <div class="product-details">
+  <h2>Aluminium Pressure Cooker </h2>
+  <p class="subtitle">Durable | Lightweight | Fast Cooking | Gas Stove Compatible</p>
+
+  <div class="rating">
+    <span>⭐⭐⭐⭐⭐ 4.8</span>
+ 
+  </div>
+
+  <div class="price-section">
+    <span class="price">₹1,915</span>
+   
+  </div>
+
+  <div class="offers">
+    <div><i class="fa fa-tag"></i> ISI certified product</div>
+    <div><i class="fa fa-star"></i>Flame guard on handles </div>
+    <div><i class="fa fa-shield-alt"></i> 5-Year Manufacturer Warranty</div>
+  </div>
+
+  <div class="size-select">
+    <label>Select Size: Ltr</label>
+    <div class="sizes">
+      <button class="size-btn active" data-price="1515">1.5</button>
+      <button class="size-btn " data-price="1915">2</button>
+      <button class="size-btn" data-price="2250">3</button>
+      <button class="size-btn" data-price="2450">5</button>
+      <button class="size-btn" data-price="2650">7.5</button>
+      <button class="size-btn" data-price="2750">10</button> 
+      <button class="size-btn" data-price="2950">12</button>
+      <button class="size-btn" data-price="3100">Medium - 4 Ltr</button>
+      <button class="size-btn" data-price="3300">Large - 6 Ltr</button>
+
+
+
+
+    </div>
+  </div>
+
+  <h3>Key Features</h3>
+  <ul style="margin-top:10px; padding-left:20px; color:#524141; font-size:18px; line-height:1.6;">
+    <li>5-Liter capacity – Ideal for medium to large families.</li>
+    <li>High-quality aluminium for fast & even heat distribution.</li>
+    <li>Outer lid design for added safety & convenience.</li>
+    <li>Non-induction base – optimized for gas stoves.</li>
+    <li>Ergonomic, heat-resistant handles for safe handling.</li>
+    <li>Easy to clean & maintain with stain-resistant finish.</li>
+    <li>Precision safety valve & gasket release system.</li>
+  </ul>
+
+  <button class="buy-btn">Buy Now</button>
+</div>
+
+
+  </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+       <footer>
+
+       <div class="copyright">
+            <p>©2025 Copyright</p>
+    </div>
+</footer>
+ 
+
+   
+
+
+  <script>
+    const thumbnails = document.querySelectorAll('.thumb');
+    const mainDisplay = document.getElementById('mainDisplay');
+    const sizeButtons = document.querySelectorAll('.size-btn');
+    const priceText = document.querySelector('.price');
+
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        mainDisplay.src = thumb.src;
+        thumbnails.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+    });
+
+    sizeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sizeButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const newPrice = btn.dataset.price;
+        priceText.textContent = `₹${newPrice}`;
+      });
+    });
+
+
+     const thumbs = document.querySelectorAll('.thumb');
+    const mainImage = document.getElementById('mainImage');
+
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener('click', () => {
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        mainImage.src = thumb.src;
+      });
+    });
+
+    // Add click event to size buttons
+    sizeButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        sizeButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
